@@ -8,7 +8,7 @@ class Item:
        self.quantity=quantity
        print(f"im created:{name}")
     def apply_discount(self):
-        self.price=self.price*Item.pay_rate
+        self.price=self.price*self.pay_rate
         #the pay_rate belongs to the item class itself you can either access
         # it from the class level or the instance level
     def calculate_total_price(self):
