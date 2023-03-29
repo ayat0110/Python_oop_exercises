@@ -1,4 +1,6 @@
 class Item:
+    def __init__(self):
+       print("im created")
     def calculate_total_price(self,x,y):
         return x*y
     #functions inside classes called methods
