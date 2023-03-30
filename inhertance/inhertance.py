@@ -1,6 +1,5 @@
 import csv
-#we use class methods to instantiate objects from other files and static methods to do stuff 
-# are not unique for every instance as parameter in the background static and class methods are available from class and instance level
+
 class Item:
     all = []
     pay_rate=0.8
@@ -50,6 +49,4 @@ class Item:
         return f"Item('{self.name}',{self.price},{self.quantity})"
     #functions inside classes called methods
 
-#we can do this because at first it will search at the instance level and because the instance dosnt have this value 
-# it will assign the value we have right now
-print(Item.is_integer(9))
+class Phone(Item):
