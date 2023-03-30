@@ -20,11 +20,7 @@ class Item:
     def __repr__(self):
         return f"Item('{self.name}',{self.price},{self.quantity})"
     #functions inside classes called methods
-item1 = Item("Phone", 100, 1)
-item2 = Item("Laptop", 1000, 3)
-item3 = Item("Cable", 10, 5)
-item4 = Item("Mouse", 50, 5)
-item5 = Item("Keyboard", 75, 5)  
+
 #we can do this because at first it will search at the instance level and because the instance dosnt have this value 
 # it will assgin the value we have right now
 print(Item.all)
