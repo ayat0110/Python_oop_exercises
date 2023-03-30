@@ -1,4 +1,5 @@
 class Item:
+    all = []
     pay_rate=0.8
     def __init__(self,name:str ,price: float,quantity=0):
        assert quantity>=0, f"quantity {quantity} is not greater than or equal to zero"
@@ -16,6 +17,8 @@ class Item:
         # it from the class level or the instance level
     def calculate_total_price(self):
         return self.price*self.quantity
+    def __repr__(self):
+        return f"Item('{self.name}',{self.price},{self.quantity})"
     #functions inside classes called methods
 item1 = Item("Phone", 100, 1)
 item2 = Item("Laptop", 1000, 3)
@@ -24,5 +27,4 @@ item4 = Item("Mouse", 50, 5)
 item5 = Item("Keyboard", 75, 5)  
 #we can do this because at first it will search at the instance level and because the instance dosnt have this value 
 # it will assgin the value we have right now
-for instance in Item.all:
-    print(instance.name)
+print(Item.all)
