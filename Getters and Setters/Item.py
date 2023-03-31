@@ -9,12 +9,20 @@ class Item:
         assert quantity >= 0, f"Quantity {quantity} is not greater or equal to zero!"
 
         # Assign to self object
-        self.name = name
+        self.__name = name
         self.price = price
         self.quantity = quantity
 
         # Actions to execute
         Item.all.append(self)
+        
+    @property
+    def name(self):
+        return self.__name
+    
+    @name.setter
+    def name(self,value):
+      self.__name=value
 
     def calculate_total_price(self):
         return self.price * self.quantity
@@ -50,5 +58,3 @@ class Item:
     def __repr__(self):
         return f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity})"
 
-    @property
-    def read_only_name(self):
